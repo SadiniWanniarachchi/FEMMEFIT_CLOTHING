@@ -27,7 +27,7 @@ const CultureSection = () => {
         >
           {/* Text Section */}
           <motion.div
-            className="w-full md:w-1/2 space-y-6 md:space-y-8"
+            className="w-full md:w-1/2 space-y-6 md:space-y-20"
             variants={childVariants}
           >
             <p className="text-sm sm:text-base text-white">Arrivals</p>
