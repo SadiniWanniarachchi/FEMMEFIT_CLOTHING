@@ -206,49 +206,49 @@ const Navbar = () => {
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-4 pt-8">
 
         {/* Left Section with Quote, Learn More Button, and Image */}
-        <div className="col-span-1 md:col-span-2 bg-[#DE6536] text-white rounded-lg p-4 flex flex-col md:flex-row items-center md:items-start gap-4">
+<div className="col-span-1 md:col-span-2 bg-[#DE6536] text-white rounded-lg p-4 flex flex-col md:flex-row items-center md:items-start gap-4">
 
-          {/* Text Section */}
-          <motion.div
-            className="flex flex-col justify-center w-full md:w-1/2"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ amount: 0.3 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-lg sm:text-xl md:text-2xl font-bold mb-24 mt-2">
-              Style trends are influenced by the cultures.
-            </h1>
+{/* Text Section */}
+<motion.div
+  className="flex flex-col justify-center w-full md:w-1/2"
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ amount: 0.3 }}
+  transition={{ duration: 0.8 }}
+>
+  <h1 className="text-lg sm:text-xl md:text-2xl font-bold mb-24 mt-2">
+    Style trends are influenced by the cultures.
+  </h1>
 
-            <motion.button
-              className="flex items-center gap-2 sm:gap-6 bg-white text-[#1E1916] px-4 py-2 rounded-full shadow-md border-2 transition-all duration-300 font-bold text-sm justify-between"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-            <span className="flex-grow text-left">LEARN MORE</span>
-              <span className="bg-[#1E1916] text-white w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center rounded-full shadow-md ml-2">
-              <MdArrowForward size={20} />
-            </span>
-            </motion.button>
-          </motion.div>
+  <motion.button
+    className="flex items-center gap-2 sm:gap-6 bg-white text-[#1E1916] px-4 py-2 rounded-full shadow-md border-2 transition-all duration-300 font-bold text-sm justify-between"
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.95 }}
+  >
+    <span className="flex-grow text-left">LEARN MORE</span>
+    <span className="bg-[#1E1916] text-white w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center rounded-full shadow-md ml-2">
+      <MdArrowForward size={20} />
+    </span>
+  </motion.button>
+</motion.div>
 
-          {/* Image Section */}
-          <motion.div
-            className="w-full md:w-auto flex justify-center"
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ amount: 0.3 }}
-            transition={{ duration: 0.8 }}
-          >
-           <div className="w-full flex justify-center md:justify-end md:pr-1">
-  <img
-    src="/images/r4.jpg"
-    alt="Cultural Fashion"
-    className="w-full max-w-xs md:w-64 h-[265px] object-cover rounded-lg"
-  />
+{/* Image Section */}
+<motion.div
+  className="w-full md:w-auto flex justify-center"
+  initial={{ opacity: 0, scale: 0.9 }}
+  whileInView={{ opacity: 1, scale: 1 }}
+  viewport={{ amount: 0.3 }}
+  transition={{ duration: 0.8 }}
+>
+  <div className="w-full flex justify-center md:justify-end md:pr-4">
+    <img
+      src="/images/r4.jpg"
+      alt="Cultural Fashion"
+      className="w-full max-w-xs md:w-64 h-[265px] object-cover rounded-lg"
+    />
+  </div>
+</motion.div>
 </div>
-          </motion.div>
-        </div>
 
         {/* Right Section with Images */}
         <div className="col-span-1 md:col-span-2 grid grid-cols-2 gap-3">
