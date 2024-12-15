@@ -20,7 +20,7 @@ const CultureSection = () => {
       initial="hidden"
       whileInView="visible"
     >
-      <div className="container h-[500px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container h-auto mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="bg-[#DE6536] p-6 sm:p-8 md:p-10 rounded-lg shadow-lg flex flex-col md:flex-row items-center"
           variants={childVariants}
