@@ -180,7 +180,7 @@ const Navbar = () => {
             variants={wordVariants}
             initial="hidden"
             whileInView="visible"
-            className="inline-block mr-3 sm:mr-5 text-sm sm:text-base"
+            className="inline-block mr-3 sm:mr-5 text-sd lg:text-3xl"
           >
             {word === "person" ? (
               <span className="inline-flex items-center border-2 border-[#E85D04] px-2 pt-1 pb-1 rounded-md">
@@ -237,11 +237,13 @@ const Navbar = () => {
             viewport={{ amount: 0.3 }}
             transition={{ duration: 0.8 }}
           >
-            <img
-              src="/images/r4.jpg"
-              alt="Cultural Fashion"
-              className="w-full max-w-xs md:w-64 h-[265px] object-cover rounded-lg"
-            />
+           <div className="w-full flex justify-center md:justify-end md:pr-4">
+  <img
+    src="/images/r4.jpg"
+    alt="Cultural Fashion"
+    className="w-full max-w-xs md:w-64 h-[265px] object-cover rounded-lg"
+  />
+</div>
           </motion.div>
         </div>
 
