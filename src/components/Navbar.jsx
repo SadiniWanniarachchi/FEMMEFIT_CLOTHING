@@ -168,23 +168,26 @@ const Navbar = () => {
       </div>
 
       {/* Quote Section */}
-      <div className="bg-[#EEE9D3] flex items-start justify-center pt-10 pb-12 px-4">
+<div className="bg-[#EEE9D3] flex items-start justify-center pt-8 pb-10 px-2 sm:px-4">
   <motion.h1
-    className="text-[#1e1916] font-bold leading-snug tracking-wider text-left text-[clamp(1.5rem, 5vw, 3rem)]"
+    className="text-[#1e1916] font-bold leading-snug tracking-wider text-left text-[clamp(1.2rem, 4vw, 3rem)]"
   >
     {quote.map((line, lineIndex) => (
-      <div key={lineIndex} className="mb-4 flex flex-wrap">
+      <div 
+        key={lineIndex} 
+        className="mb-3 sm:mb-4 flex flex-wrap justify-center sm:justify-start"
+      >
         {line.map((word, wordIndex) => (
           <motion.span
             key={wordIndex}
             variants={wordVariants}
             initial="hidden"
             whileInView="visible"
-            className="inline-block mr-3 sm:mr-5 text-sd lg:text-3xl"
+            className="inline-block mr-2 sm:mr-5 text-base sm:text-lg lg:text-3xl"
           >
             {word === "person" ? (
-              <span className="inline-flex items-center border-2 border-[#E85D04] px-2 pt-1 pb-1 rounded-md">
-                <span className="text-[#E85D04] text-lg sm:text-2xl mr-2">🌞</span>
+              <span className="inline-flex items-center border-2 border-[#E85D04] px-1 sm:px-2 pt-1 pb-1 rounded-md">
+                <span className="text-[#E85D04] text-base sm:text-lg lg:text-2xl mr-1 sm:mr-2">🌞</span>
                 <span>{word}</span>
               </span>
             ) : (
