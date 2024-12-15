@@ -124,7 +124,7 @@ const Navbar = () => {
                 whileTap={{ scale: 0.95 }}
             >
              LEARN MORE
-            <span className="bg-[#1E1916] text-white w-10 h-10 flex items-center justify-center rounded-full shadow-md">
+            <span className="bg-[#1E1916] text-white w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full shadow-md">
             <MdArrowForward size={20} />
            </span>
            </motion.button>
