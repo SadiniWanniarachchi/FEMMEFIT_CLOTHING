@@ -53,17 +53,17 @@ const CultureSection = () => {
       </motion.button>
     </motion.div>
 
-    {/* Image Section */}
-    <motion.div
-      className="w-full md:w-1/2 flex justify-center md:justify-end"
-      variants={childVariants}
-    >
-      <img
-        src="/images/r5.jpg"
-        alt="Woman in chair"
-        className="w-full max-w-sm sm:max-w-md md:max-w-lg h-auto object-cover rounded-lg"
-      />
-    </motion.div>
+{/* Image Section */}
+<motion.div
+  className="w-full md:w-1/2 flex justify-center md:justify-end"
+  variants={childVariants}
+>
+  <img
+    src="/images/r5.jpg"
+    alt="Woman in chair"
+    className="w-full max-w-xs sm:max-w-sm md:max-w-md h-auto object-cover rounded-lg"
+  />
+</motion.div>
     </motion.div>
       </div>
     </motion.div>
