@@ -237,7 +237,7 @@ const Navbar = () => {
             viewport={{ amount: 0.3 }}
             transition={{ duration: 0.8 }}
           >
-           <div className="w-full flex justify-center md:justify-end md:pr-4">
+           <div className="w-full flex justify-center md:justify-end md:pr-1">
   <img
     src="/images/r4.jpg"
     alt="Cultural Fashion"
