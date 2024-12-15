@@ -312,35 +312,40 @@ const Navbar = () => {
       </div>
 
       {/* Quote Section */}
-      <div className="bg-[#EEE9D3] flex flex-col md:flex-row items-center justify-center md:justify-end px-6 md:px-20 pt-20 pb-20">
-        <h1 className="text-[#1e1916] text-xl md:text-3xl lg:text-4xl font-bold leading-snug tracking-wider text-center md:text-right cursor-pointer">
-          {[
-            "When they write that",
-            "the name of a historical hero",
-            "they mean woman."
-          ].map((line, lineIndex) => (
-            <span key={lineIndex} className="block">
-              {Array.from(line).map((letter, index) => (
-                <motion.span
-                  key={index}
-                  className="inline-block"
-                  whileHover={{
-                    y: -5, // Move upward
-                    color: "#de6536", // Change color to orange
-                  }}
-                  transition={{
-                    type: "spring",
-                    stiffness: 300,
-                    damping: 20,
-                  }}
-                >
-                  {letter === " " ? "\u00A0" : letter}
-                </motion.span>
-              ))}
-            </span>
-          ))}
-        </h1>
-      </div>
+<div className="bg-[#EEE9D3] flex flex-col md:flex-row items-center justify-center md:justify-end px-6 md:px-20 pt-20 pb-20">
+  <h1 className="text-[#1e1916] text-xl md:text-3xl lg:text-4xl font-bold leading-snug tracking-wider text-center md:text-right cursor-pointer">
+    {[
+      "When they write that",
+      "the name of a historical hero",
+      "they mean woman."
+    ].map((line, lineIndex) => (
+      <span key={lineIndex} className="block">
+        {Array.from(line).map((letter, index) => (
+          <motion.span
+            key={index}
+            className="inline-block"
+            whileHover={{
+              y: -10, // Move upward on hover (for larger screens)
+              color: "#de6536", // Change color to orange
+            }}
+            whileTap={{
+              y: -10, // Simulate hover effect for mobile on tap
+              color: "#de6536",
+            }}
+            transition={{
+              type: "spring",
+              stiffness: 300,
+              damping: 20,
+            }}
+          >
+            {letter === " " ? "\u00A0" : letter}
+          </motion.span>
+        ))}
+      </span>
+    ))}
+  </h1>
+</div>
+
 
       {/* Bottom Image Section */}
       <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 pb-12">
