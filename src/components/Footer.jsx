@@ -15,7 +15,7 @@ const sectionVariants = {
 function Footer() {
   return (
     <motion.footer
-      className="bg-[#de6536] pt-20 pb-8"
+      className="bg-[#de6536] pt-12 sm:pt-20 pb-8"
       variants={footerVariants}
       initial="hidden"
       whileInView="visible"
@@ -35,22 +35,22 @@ function Footer() {
         </svg>
       </div>
 
-      <div className="max-w-screen-2xl mx-auto px-6 md:px-12 lg:px-40 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-12 lg:gap-8">
+      <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 md:px-12 lg:px-40 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-12 lg:gap-8">
         
         {/* Left Section */}
         <motion.div variants={sectionVariants}>
-          <h1 className="text-3xl text-white font-bold">FEMMEFIT</h1>
-          <p className="text-base text-white mt-2">Since 2023</p>
+          <h1 className="text-2xl sm:text-3xl text-white font-bold">FEMMEFIT</h1>
+          <p className="text-sm sm:text-base text-white mt-2">Since 2023</p>
           
           {/* Social Media Icons */}
-          <div className="flex space-x-6 mt-8">
+          <div className="flex space-x-4 sm:space-x-6 mt-6 sm:mt-8">
             <a
               href="https://www.instagram.com"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white hover:text-[#1E1916] transform hover:-translate-y-1 transition-transform duration-300"
             >
-              <FaInstagram size={24} />
+              <FaInstagram size={20} />
             </a>
             <a
               href="https://www.pinterest.com"
@@ -58,7 +58,7 @@ function Footer() {
               rel="noopener noreferrer"
               className="text-white hover:text-[#1E1916] transform hover:-translate-y-1 transition-transform duration-300"
             >
-              <FaPinterest size={24} />
+              <FaPinterest size={20} />
             </a>
             <a
               href="https://www.facebook.com"
@@ -66,42 +66,42 @@ function Footer() {
               rel="noopener noreferrer"
               className="text-white hover:text-[#1E1916] transform hover:-translate-y-1 transition-transform duration-300"
             >
-              <FaFacebook size={24} />
+              <FaFacebook size={20} />
             </a>
           </div>
         </motion.div>
 
         {/* Navigation Section 1 */}
         <motion.div variants={sectionVariants}>
-          <h3 className="text-xl text-white font-bold">Navigation</h3>
+          <h3 className="text-lg sm:text-xl text-white font-bold">Navigation</h3>
           <ul className="mt-4 space-y-2">
-            <li><a href="#" className="text-white hover:text-[#1E1916]">Home</a></li>
-            <li><a href="#" className="text-white hover:text-[#1E1916]">Contact</a></li>
-            <li><a href="#" className="text-white hover:text-[#1E1916]">Shop</a></li>
-            <li><a href="#" className="text-white hover:text-[#1E1916]">Sale</a></li>
+            <li><a href="#" className="text-sm sm:text-base text-white hover:text-[#1E1916]">Home</a></li>
+            <li><a href="#" className="text-sm sm:text-base text-white hover:text-[#1E1916]">Contact</a></li>
+            <li><a href="#" className="text-sm sm:text-base text-white hover:text-[#1E1916]">Shop</a></li>
+            <li><a href="#" className="text-sm sm:text-base text-white hover:text-[#1E1916]">Sale</a></li>
           </ul>
         </motion.div>
 
         {/* Navigation Section 2 */}
         <motion.div variants={sectionVariants}>
-          <h3 className="text-xl text-white font-bold">Navigation</h3>
+          <h3 className="text-lg sm:text-xl text-white font-bold">Navigation</h3>
           <ul className="mt-4 space-y-2">
-            <li><a href="#" className="text-white hover:text-[#1E1916]">About</a></li>
-            <li><a href="#" className="text-white hover:text-[#1E1916]">Help</a></li>
-            <li><a href="#" className="text-white hover:text-[#1E1916]">Customer</a></li>
+            <li><a href="#" className="text-sm sm:text-base text-white hover:text-[#1E1916]">About</a></li>
+            <li><a href="#" className="text-sm sm:text-base text-white hover:text-[#1E1916]">Help</a></li>
+            <li><a href="#" className="text-sm sm:text-base text-white hover:text-[#1E1916]">Customer</a></li>
           </ul>
         </motion.div>
 
         {/* Newsletter Section */}
         <motion.div variants={sectionVariants}>
-          <h3 className="text-xl text-white font-bold">Subscribe to our newsletter</h3>
+          <h3 className="text-lg sm:text-xl text-white font-bold">Subscribe to our newsletter</h3>
           <div className="flex flex-col mt-4">
             <input 
               type="email" 
               placeholder="Enter your email" 
-              className="p-2 w-full border border-[#1E1916] rounded-md mb-4"
+              className="p-2 text-sm sm:text-base w-full border border-[#1E1916] rounded-md mb-4"
             />
-            <button className="p-2 bg-[#1E1916] text-white rounded-md">
+            <button className="p-2 bg-[#1E1916] text-white text-sm sm:text-base rounded-md">
               Subscribe
             </button>
           </div>

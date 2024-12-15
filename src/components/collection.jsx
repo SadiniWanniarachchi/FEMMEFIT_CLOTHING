@@ -21,15 +21,15 @@ const Collection2023 = () => {
   ];
 
   return (
-    <div className="bg-[#EEE9D3] flex flex-col items-start pt-5 pb-28 px-4 md:px-1">
+    <div className="bg-[#EEE9D3] flex flex-col items-start pt-5 pb-28 px-4 md:px-10">
       {/* Header Section */}
-      <div className="mb-8 pl-44">
+      <div className="mb-8 pl-4 sm:pl-12 md:pl-44">
         <p className="text-base text-[#1E1916]">Arrivals</p>
-        <h1 className="text-4xl font-bold text-[#1E1916]">Collection 2023</h1>
+        <h1 className="text-3xl sm:text-4xl font-bold text-[#1E1916]">Collection 2023</h1>
       </div>
 
       {/* Collection Cards */}
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {collections.map((item) => (
           <div
             key={item.id}
