@@ -22,12 +22,12 @@ const CultureSection = () => {
     >
       <div className="container h-[500px] mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          className="bg-[#DE6536] p-2 sm:p-8 md:p-10 rounded-lg shadow-lg flex flex-col md:flex-row items-center"
+          className="bg-[#DE6536] p-6 sm:p-8 md:p-10 rounded-lg shadow-lg flex flex-col md:flex-row items-center"
           variants={childVariants}
         >
           {/* Text Section */}
     <motion.div
-      className="w-full md:w-1/2 space-y-16"
+      className="w-full md:w-1/2 space-y-8"
       variants={childVariants}
     >
       <p className="text-sm sm:text-base text-white">Arrivals</p>
@@ -61,7 +61,7 @@ const CultureSection = () => {
   <img
     src="/images/r5.jpg"
     alt="Woman in chair"
-    className="w-full max-w-xs sm:max-w-sm md:max-w-md h-[450px] object-cover rounded-lg"
+    className="w-full h-auto mt-2 md:mt-0 md:w-auto md:h-80 object-cover rounded-lg"
   />
 </motion.div>
     </motion.div>
