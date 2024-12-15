@@ -26,9 +26,9 @@ const CultureSection = () => {
           variants={childVariants}
         >
           {/* Text Content */}
-          <motion.div className="w-full md:w-1/2 space-y-6 md:space-y-10" variants={childVariants}>
-            <p className="text-sm sm:text-base text-white">Arrivals</p>
-            <h2 className="text-lg sm:text-2xl md:text-4xl font-bold text-white">
+          <motion.div className="w-full md:w-1/2 space-y-20 md:space-y-16" variants={childVariants}>
+            <p className="text-sm sm:text-base text-white pt-0">Arrivals</p>
+            <h2 className="text-3xl sm:text-2xl md:text-4xl font-bold text-white">
               Style trends are influenced <br />
               by the cultures.
             </h2>

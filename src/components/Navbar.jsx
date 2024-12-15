@@ -117,7 +117,7 @@ const Navbar = () => {
             </motion.button>
 
             <motion.button
-              className="flex items-center gap-3 sm:gap-8 bg-white text-[#1E1916] px-6 py-2 sm:h-14 rounded-full shadow-md transition-all duration-300 text-xs sm:text-sm font-bold"
+              className="flex items-center gap-3 sm:gap-8 bg-white text-[#1E1916] px-6 py-2 sm:h-14 rounded-full shadow-md transition-all duration-300 text-xs sm:text-sm font-bold whitespace-nowrap"
               whileHover={{
                 scale: 1.05,
               }}
@@ -169,34 +169,36 @@ const Navbar = () => {
 
       {/* Quote Section */}
       <div className="bg-[#EEE9D3] flex items-start justify-center pt-10 pb-12 px-4">
-        <motion.h1 className="text-[#1e1916] text-xl sm:text-3xl md:text-4xl font-bold leading-snug tracking-wider text-left">
-          {quote.map((line, lineIndex) => (
-            <div key={lineIndex} className="mb-4 flex flex-wrap">
-              {line.map((word, wordIndex) => (
-                <motion.span
-                  key={wordIndex}
-                  variants={wordVariants}
-                  initial="hidden"
-                  whileInView="visible"
-                  className="inline-block mr-3 sm:mr-5 text-sm sm:text-base"
-                >
-                  {word === "person" ? (
-                    <span className="inline-flex items-center border-2 border-[#E85D04] px-2 pt-1 pb-1 rounded-md">
-                      <span className="text-[#E85D04] text-lg sm:text-2xl mr-2">🌞</span>
-                      <span>{word}</span>
-                    </span>
-                  ) : (
-                    typeof word === "string" ? word : word
-                  )}
-                </motion.span>
-              ))}
-            </div>
-          ))}
-        </motion.h1>
+  <motion.h1
+    className="text-[#1e1916] font-bold leading-snug tracking-wider text-left text-[clamp(1.5rem, 5vw, 3rem)]"
+  >
+    {quote.map((line, lineIndex) => (
+      <div key={lineIndex} className="mb-4 flex flex-wrap">
+        {line.map((word, wordIndex) => (
+          <motion.span
+            key={wordIndex}
+            variants={wordVariants}
+            initial="hidden"
+            whileInView="visible"
+            className="inline-block mr-3 sm:mr-5 text-sm sm:text-base"
+          >
+            {word === "person" ? (
+              <span className="inline-flex items-center border-2 border-[#E85D04] px-2 pt-1 pb-1 rounded-md">
+                <span className="text-[#E85D04] text-lg sm:text-2xl mr-2">🌞</span>
+                <span>{word}</span>
+              </span>
+            ) : (
+              typeof word === "string" ? word : word
+            )}
+          </motion.span>
+        ))}
       </div>
+    ))}
+  </motion.h1>
+</div>
    
     
-
+{/* Additional Section */}
       <div className="bg-[#EEE9D3] min-h-[400px] py-8">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-4 pt-8">
 
@@ -211,21 +213,19 @@ const Navbar = () => {
             viewport={{ amount: 0.3 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-lg sm:text-xl md:text-2xl font-bold mb-4 md:mb-6 mt-3">
+            <h1 className="text-lg sm:text-xl md:text-2xl font-bold mb-24 mt-2">
               Style trends are influenced by the cultures.
             </h1>
 
             <motion.button
-              className="flex items-center bg-white text-[#1E1916] px-3 py-2 rounded-full shadow-md transition-all duration-300 font-bold text-sm justify-between"
+              className="flex items-center gap-2 sm:gap-6 bg-white text-[#1E1916] px-4 py-2 rounded-full shadow-md border-2 transition-all duration-300 font-bold text-sm justify-between"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <span className="flex-grow text-left">LEARN MORE</span>
-              <span
-                className="bg-[#1E1916] text-white w-7 h-7 flex items-center justify-center rounded-full shadow-md ml-2"
-              >
-                <MdArrowForward size={20} />
-              </span>
+            <span className="flex-grow text-left">LEARN MORE</span>
+              <span className="bg-[#1E1916] text-white w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center rounded-full shadow-md ml-2">
+              <MdArrowForward size={20} />
+            </span>
             </motion.button>
           </motion.div>
 
@@ -240,7 +240,7 @@ const Navbar = () => {
             <img
               src="/images/r4.jpg"
               alt="Cultural Fashion"
-              className="w-full max-w-xs md:w-64 h-[250px] object-cover rounded-lg"
+              className="w-full max-w-xs md:w-64 h-[265px] object-cover rounded-lg"
             />
           </motion.div>
         </div>
@@ -307,7 +307,7 @@ const Navbar = () => {
       </div>
 
       {/* Quote Section */}
-      <div className="bg-[#EEE9D3] flex flex-col md:flex-row items-center justify-center md:justify-end px-6 md:px-20 pt-8 pb-12">
+      <div className="bg-[#EEE9D3] flex flex-col md:flex-row items-center justify-center md:justify-end px-6 md:px-20 pt-20 pb-20">
         <h1 className="text-[#1e1916] text-xl md:text-3xl lg:text-4xl font-bold leading-snug tracking-wider text-center md:text-right cursor-pointer">
           {[
             "When they write that",
@@ -387,8 +387,10 @@ const Navbar = () => {
         <hr className="h-1 bg-[#DE6536] border-0 mx-6 md:mx-44" />
       </div>
 
+
     </div>
     </div>
+
 
   );
 
