@@ -117,17 +117,17 @@ const Navbar = () => {
             </motion.button>
 
             <motion.button
-              className="flex items-center gap-3 sm:gap-8 bg-white text-[#1E1916] px-6 py-2 sm:h-14 rounded-full shadow-md transition-all duration-300 text-xs sm:text-sm font-bold whitespace-nowrap"
-              whileHover={{
-                scale: 1.05,
-              }}
-              whileTap={{ scale: 0.95 }}
+                className="flex items-center gap-4 bg-white text-[#1E1916] px-5 py-3 h-12 sm:h-14 rounded-full shadow-md transition-all duration-300 text-sm sm:text-base font-bold whitespace-nowrap"
+                whileHover={{
+                   scale: 1.05,
+                }}
+                whileTap={{ scale: 0.95 }}
             >
-              LEARN MORE
-              <span className="bg-[#1E1916] text-white w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full shadow-md">
-                <MdArrowForward size={20} />
-              </span>
-            </motion.button>
+             LEARN MORE
+            <span className="bg-[#1E1916] text-white w-10 h-10 flex items-center justify-center rounded-full shadow-md">
+            <MdArrowForward size={20} />
+           </span>
+           </motion.button>
           </div>
         </div>
 
