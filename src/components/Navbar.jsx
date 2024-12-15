@@ -40,7 +40,7 @@ const Navbar = () => {
         key="strawberry"
         src="/images/str.png"
         alt="Strawberry"
-        className="inline-block w-14 h-13 object-cover"
+        className="inline-block w-11 h-13 object-cover"
       />,
       'by',
       'another',
@@ -118,13 +118,10 @@ const Navbar = () => {
           </button>
 
 
-
 {/* Buttons Section */}
- <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex gap-14 flex-nowrap justify-center">
-
+<div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex gap-4 sm:gap-10 justify-center items-center">
   <motion.button
-    className="flex items-center gap-7 bg-[#1E1916] text-white px-3 sm:px-2 py-2 sm:py-2 rounded-full shadow-md transition-all duration-300 whitespace-nowrap justify-between text-sm sm:text-base"
-        
+    className="flex items-center gap-3 sm:gap-5 bg-[#1E1916] text-white px-6 py-2 sm:h-14 rounded-full shadow-md transition-all duration-300 whitespace-nowrap text-sm sm:text-base"
     whileHover={{
       scale: 1.05,
     }}
@@ -132,30 +129,31 @@ const Navbar = () => {
   >
     VIEW CATALOGUE
     <span
-      className="flex-grow text-left bg-white text-[#1E1916] w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center rounded-full shadow-md ml-2"
+      className="bg-white text-[#1E1916] w-10 h-10 flex items-center justify-center rounded-full shadow-md"
     >
       <MdArrowForward size={20} />
     </span>
   </motion.button>
 
-
   <motion.button
-    className="flex items-center gap-10 bg-[white] text-[#1E1916] px-3 sm:px-2 py-2 sm:py-2 rounded-full shadow-md transition-all duration-300 font-bold text-sm sm:text-base justify-between whitespace-nowrap"
+    className="flex items-center gap-3 sm:gap-8 bg-white text-[#1E1916] px-6 py-2 sm:h-14 w-48 sm:w-56 rounded-full shadow-md transition-all duration-300 text-sm sm:text-base font-bold"
+
     whileHover={{
       scale: 1.05,
     }}
     whileTap={{ scale: 0.95 }}
   >
     LEARN MORE
-    <span 
-      className="bg-[#1E1916] text-[white] w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center rounded-full shadow-md ml-2"
+    <span
+      className="bg-[#1E1916] text-white w-10 h-10 flex items-center justify-center rounded-full shadow-md"
     >
       <MdArrowForward size={20} />
     </span>
   </motion.button>
+</div>
 
-          </div>
-        </div>
+
+</div>
 
 
 
@@ -199,30 +197,38 @@ const Navbar = () => {
 
 {/* Quote Section */}
 <div className="bg-[#EEE9D3] flex items-start justify-center pt-16 pb-18">
-      <motion.h1
-        className="text-[#1e1916] text-3xl md:text-4xl lg:text-4xl font-bold leading-snug tracking-wider text-left"
-      >
-        {quote.map((line, lineIndex) => (
-          <div key={lineIndex} className="mb-4">
-            {line.map((word, wordIndex) => (
-              <motion.span
-                key={wordIndex}
-                variants={wordVariants}
-                initial="hidden"
-                whileInView="visible"
-                style={{
-                  display: 'inline-block',
-                  marginRight: '1.2rem', // Spacing between words
-                }}
-              >
-                {typeof word === 'string' ? word : word /* Renders the image */}
-              </motion.span>
-            ))}
-          </div>
+  <motion.h1
+    className="text-[#1e1916] text-3xl md:text-4xl lg:text-4xl font-bold leading-snug tracking-wider text-left"
+  >
+    {quote.map((line, lineIndex) => (
+      <div key={lineIndex} className="mb-4 flex flex-wrap">
+        {line.map((word, wordIndex) => (
+          <motion.span
+            key={wordIndex}
+            variants={wordVariants}
+            initial="hidden"
+            whileInView="visible"
+            className="inline-block mr-5" // Adjust word spacing
+          >
+            {word === "person" ? (
+              <span className="inline-flex items-center border-2 border-[#E85D04] px-2 pt-1 pb-1 rounded-md">
+                {/* Sun Emoji inside the orange outline */}
+                <span className="text-[#E85D04] text-2xl mr-2">
+                  🌞
+                </span>
+                {/* The word "person" */}
+                <span>{word}</span>
+              </span>
+            ) : (
+              typeof word === "string" ? word : word /* Renders the image */
+            )}
+          </motion.span>
         ))}
-      </motion.h1>
-    
-    </div>
+      </div>
+    ))}
+  </motion.h1>
+</div>
+
 
 {/* Additional Sections */}
     <div className="bg-[#EEE9D3] min-h-[400px] md:min-h-[300px] py-8 md:py-12">
