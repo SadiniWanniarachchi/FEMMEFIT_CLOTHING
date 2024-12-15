@@ -234,13 +234,13 @@ const Navbar = () => {
 
 {/* Image Section */}
 <motion.div
-  className="w-full md:w-auto flex justify-center"
+  className="w-full md:w-auto flex justify-center md:justify-start"
   initial={{ opacity: 0, scale: 0.9 }}
   whileInView={{ opacity: 1, scale: 1 }}
   viewport={{ amount: 0.3 }}
   transition={{ duration: 0.8 }}
 >
-  <div className="w-full flex justify-center md:justify-end md:pr-4">
+  <div className="w-full flex justify-center md:justify-end md:pl-6 lg:pl-10">
     <img
       src="/images/r4.jpg"
       alt="Cultural Fashion"
